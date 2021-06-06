@@ -2810,7 +2810,7 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color:white;
- 
+  font-size: medium
 }
 
 .flip-card-front {
@@ -2819,7 +2819,7 @@ body {
 }
 
 .flip-card-back {
-  background-color: grey;
+  background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
 }

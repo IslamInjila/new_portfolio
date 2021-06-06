@@ -1,0 +1,57 @@
+<html>
+
+<body>
+
+<h2>SQL Queries Used In This Project</h2>
+
+
+<h3>Show all customer records</h3>
+
+SELECT * FROM customers;
+
+<h3>Show total number of customers</h3>
+
+SELECT count(*) FROM customers;
+
+<h3> Show transactions for Chennai market</h3>
+
+SELECT * FROM transactions where market_code='Mark001';
+
+<h3> Show distrinct product codes that were sold in chennai</h3>
+
+SELECT distinct product_code FROM transactions where market_code='Mark001';
+
+<h3>Show transactions where currency is US dollars</h3>
+
+SELECT * from transactions where currency="USD"
+
+<h3>Show transactions in 2020 join by date table</h3>
+
+SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;
+
+<h3>Show total revenue in year 2020</h3>
+
+SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";
+
+<h3>Show total revenue in year 2020, January Month</h3>
+
+SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");
+
+<h3>Show total revenue in year 2020 in Chennai</h3>
+
+SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.market_code="Mark001";
+
+<br>
+<h2 >Dashboard Using Tableau</h2>
+<img src="dashboard.png" width: auto alt="" />
+</body>
+
+
+
+
+
+
+
+
+
+</html>

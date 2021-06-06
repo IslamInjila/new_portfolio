@@ -18,7 +18,6 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-	font-size: medium;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -2809,8 +2808,7 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color:white;
- 
+  background-color: #bbb;
 }
 
 .flip-card-front {
@@ -2819,7 +2817,7 @@ body {
 }
 
 .flip-card-back {
-  background-color: grey;
+  background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
 }
